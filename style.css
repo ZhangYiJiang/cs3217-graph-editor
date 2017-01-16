@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    padding: 10px;
+    color: #444;
+}
+
+svg {
+    border: 1px solid #ccc;
+    flex: 1 auto;
+    width: 100%;
+    height: 600px;
+}
+
+.link {
+    stroke: #999;
+}
+
+.node {
+}
+
+.node circle {
+    stroke: #fff;
+}
+
+.node circle,
+.node text {
+    transition: .2s all;
+}
+
+.node:hover circle, 
+.node:hover text {
+    transform: scale(1.4);
+}
+
+.node.highlight-source circle,
+.node.highlight-target.circle {
+    stroke-dasharray: 5, 5;
+    stroke-width: 2;
+}
+
+.node.highlight-source circle {
+    stroke: orange;
+}
+
+.node.highlight-target circle {
+    stroke: rebeccapurple;
+}
+
+.node text {
+    fill: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.matrix {
+    margin-bottom: 40px;
+}
+
+.matrix header {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0 10px;
+}
+
+.matrix h2 {
+    margin: 0;
+}
+
+.matrix table input {
+    width: 100%;
+    border: 1px solid #999;
+    border-width: 0 0 1px 0;
+    padding: 6px 2px 6px 50px;
+    transition: .3s all;
+}
+
+.matrix td {
+    font-size: 16px;
+    padding: 12px 4px;
+    position: relative;
+}
+
+.matrix td label {
+    position: absolute;
+    left: 4px;
+    bottom: 20px;
+    opacity: .6;
+    transition: .3s all;
+}
+
+.matrix input:focus + label,
+.matrix td:hover label {
+    opacity: 1;
+}
+
+.matrix input:focus, 
+.matrix td:hover input {
+    border-color: #333;
+}
+
+.matrix button {
+    padding: 6px 12px;
+}
+
+.outputs {
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.outputs > div,
+.preview {
+    position: relative;
+}
+
+.outputs h2,
+.preview h2 {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+    opacity: .4;
+}
+
+.outputs > div {
+    width: 50%;
+}
+
+.outputs textarea {
+    padding: 12px;
+    margin: 0;
+    border: 1px solid #999;
+    height: 400px;
+    width: 100%;
+    resize: vertical;
+    font-size: 11px;
+    font-family: Menlo, Inconsolata, Consolas, Ubuntu Mono, Source Code Pro, 
+        Bitstream Vera Sans Mono, monospace;
+}
+
+#swift-output {
+    border-right: 0;
+}

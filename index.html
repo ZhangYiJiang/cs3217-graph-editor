@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Graph Editor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CS3217: Graph Editor</h1>
+  <div class="preview">
+    <h2>Preview</h2>
+    <svg></svg>
+  </div>
+  <div class="matrix">
+    <header>
+      <h2>Editor</h2>
+      <div class="editor-controls">
+        <button class="add-node">Add Node</button>
+        <button class="update-graph">Update</button>
+      </div>
+    </header>
+    
+    <table>
+    </table>
+  </div>
+  <div class="outputs">
+    <div>
+      <h2><label for="swift-output">Swift</label></h2>
+      <textarea id="swift-output"></textarea>
+    </div>
+    <div>
+      <h2><label for="json-output">JSON</label></h2>
+      <textarea id="json-output"></textarea>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="graph.js"></script>
+  <script src="output.js"></script>
+  <script src="editor.js"></script>
+</body>
+</html>
