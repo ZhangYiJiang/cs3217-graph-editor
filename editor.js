@@ -1,4 +1,3 @@
-// Start with 5 nodes
 const editor = {
   ele: $('.matrix table'),
   
@@ -70,16 +69,17 @@ const editor = {
 
     this.ele.find('tr').each((x, ele) => {
       $(ele).find('input').each((y, ele) => {
-        // TODO: Handle multigraph
-
-        const val = ele.value;
-        if (!isNaN(parseFloat(val))) {
-          links.push({
-            source: this.getLabel(x),
-            target: this.getLabel(y),
-            weight: val,
-          });
-        }
+        ele.value.split(',').forEach((n) => {
+          const val = parseFloat(n.trim());
+          
+          if (!isNaN(val)) {
+            links.push({
+              source: this.getLabel(x),
+              target: this.getLabel(y),
+              weight: val,
+            });
+          }
+        });
       });
     });
 
