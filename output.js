@@ -6,7 +6,7 @@ function toSwift(graph) {
   });
   
   graph.links.forEach((link) => {
-    lines.push(`graph.addEdge(Edge(source: Node("${link.source}"), destination: Node("${link.target}"), weight: ${link.weight}))`);
+    lines.push(`graph.addEdge(Edge(source: Node("${link.source}"), destination: Node("${link.target}"), weight: ${link.weight})!)`);
   });
   
   return lines.join('\n');
