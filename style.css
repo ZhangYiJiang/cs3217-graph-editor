@@ -10,6 +10,18 @@ html, body {
 body {
     padding: 10px;
     color: #444;
+    font-family: sans-serif;
+}
+
+.global-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 20px 0;
+}
+
+.global-header h1 {
+    margin: 0;
 }
 
 svg {
