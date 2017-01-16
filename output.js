@@ -1,5 +1,5 @@
 function toSwift(graph) {
-  const lines = ['var graph = Graph<String>(isDirected: true)'];
+  const lines = ['let graph = Graph<String>(isDirected: true)'];
   
   graph.nodes.forEach((node) => {
     lines.push(`graph.addNode(Node("${node.id}"))`);
